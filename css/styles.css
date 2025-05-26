@@ -56,6 +56,46 @@ video {
   cursor: pointer;
 }
 
+/* Clima y Hora - Esquina superior derecha */
+.weather-container {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* <-- cambia de left a right */
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: white;
+  z-index: 1000; /* Encima del video */
+}
+
+.weather-container img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.temp-time-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.datetime-container {
+  font-size: 32px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+#temperature {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+
+
 /* Footer */
 .footer {
   position: fixed;
@@ -94,3 +134,4 @@ video {
     transform: translateX(-100%);
   }
 }
+
