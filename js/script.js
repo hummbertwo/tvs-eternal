@@ -46,24 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Alterna el tamaño del video y muestra el info-box juntos
-    function toggleVideoSizeAndShowInfoBox() {
-        state.isMinimized = !state.isMinimized;
-        elements.videoContainer.classList.toggle("minimized", state.isMinimized);
-
-        if (state.isMinimized) {
-            const event = state.events[state.currentEventIndex];
-            elements.infoTitle.textContent = event.title;
-            elements.infoDate.textContent = event.date;
-            elements.infoBox.classList.add("show");
-
-            setTimeout(() => {
-                elements.infoBox.classList.remove("show");
-                state.currentEventIndex = (state.currentEventIndex + 1) % state.events.length;
-            }, 4500);
-        }
-    }
-
     // Alterna la visibilidad del footer cada 20 segundos
     function toggleFooter() {
         elements.footer.classList.toggle("show");
