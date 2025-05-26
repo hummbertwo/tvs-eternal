@@ -1,45 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pantallas Eternal">
-    <title>Pantalla Informativa - SkyReach Condo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pantallas Eternal">
+  <title>Pantalla Informativa - SkyReach Condo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-    <main>
-        <!-- Clima y Hora -->
-        <div class="weather-container">
-            <img id="weatherIcon" alt="Clima">   
-            <div class="temp-time-container">
-                <span id="temperature" aria-live="polite">24°</span>
-                <div class="datetime-container">
-                    <div id="date" aria-label="Fecha actual">MAR 10, 2025</div>
-                    <div id="day" aria-label="Día de la semana">LUNES</div>
-                    <span id="time" aria-label="Hora actual">04:23 p.m.</span>
-                </div>
-            </div>
+  <main>
+    <!-- Clima y Hora -->
+    <div class="weather-container">
+      <img id="weatherIcon" alt="Clima">
+      <div class="temp-time-container">
+        <span id="temperature" aria-live="polite">24°</span>
+        <div class="datetime-container">
+          <div id="date" aria-label="Fecha actual">MAR 10, 2025</div>
+          <div id="day" aria-label="Día de la semana">LUNES</div>
+          <span id="time" aria-label="Hora actual">04:23 p.m.</span>
         </div>
-        
-        <!-- Video -->
-        <div class="video-container">
-            <video id="video" loop>
-                <source src="https://www.dropbox.com/scl/fi/ov7xek4ste7ogmt4iqasa/video2.mp4?rlkey=df2ur21okatfpjzfx6okztk1s&st=x4bguixw&raw=1" type="video/mp4">
-                Tu navegador no soporta videos.
-            </video>
-            <button id="playButton" class="video-control" aria-label="Reproducir video">▶ Reproducir</button>
-        </div>
+      </div>
+    </div>
 
-        <!-- Footer -->
-        <div class="footer" id="footer">
-            <div class="marquee">
-                <p>🔹 EVENTO MAR 12-16 🔹 MEET OUR NEW CFO - JOHN 🔹</p>
-            </div>
-        </div>
-    </main>
+    <!-- Video -->
+    <div class="video-container">
+      <video id="video" loop muted playsinline>
+        <source src="https://www.dropbox.com/scl/fi/ov7xek4ste7ogmt4iqasa/video2.mp4?rlkey=df2ur21okatfpjzfx6okztk1s&st=x4bguixw&raw=1" type="video/mp4">
+        Tu navegador no soporta videos.
+      </video>
+      <button id="playButton" class="video-control" aria-label="Reproducir video">▶ Reproducir</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="footer">
+      <div class="marquee">
+        <p>🔹 EVENTO MAR 12-16 🔹 MEET OUR NEW CFO - JOHN 🔹</p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
