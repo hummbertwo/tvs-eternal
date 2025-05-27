@@ -1,39 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const API_KEY = '865eee93fe9fc60142d6b7b1b21ea4ea';
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("video");
+  const playButton = document.getElementById("playButton");
 
-  const elements = {
-    video: document.getElementById("video"),
-    unmuteBtn: document.getElementById("playButton"),
-    footer: document.getElementById("footer"),
-    videoContainer: document.querySelector(".video-container"),
-    weatherIcon: document.getElementById("weatherIcon"),
-    temperature: document.getElementById("temperature"),
-    date: document.getElementById("date"),
-    day: document.getElementById("day"),
-    time: document.getElementById("time"),
-  };
+  // NO reproducimos el video automáticamente
+  video.pause(); // por si acaso
 
-  const state = {
-    userInteracted: localStorage.getItem("userInteracted") === "true",
-  };
+  // Mostramos el botón
+  playButton.style.display = "block";
 
-  function handleAudio() {
-    elements.unmuteBtn.addEventListener("click", () => {
-      elements.video.muted = false;
-      elements.video.play().catch((err) => console.warn("Error:", err));
-      elements.unmuteBtn.style.display = "none";
-      localStorage.setItem("userInteracted", "true");
+  // Al hacer clic: desmutea, reproduce, oculta botón
+  playButton.addEventListener("click", () => {
+    video.muted = false;
+    video.play().then(() => {
+      playButton.style.display = "none";
+      console.log("Video y audio iniciados");
+    }).catch(err => {
+      console.error("Error al reproducir video:", err);
     });
+  });
 
-    elements.video.pause();
 
-    if (!state.userInteracted) {
-      elements.unmuteBtn.style.display = "block";
-    } else {
-      elements.video.play().catch(() => {});
-      elements.unmuteBtn.style.display = "none";
-    }
-  }
 
   function toggleFooter() {
     elements.footer.classList.toggle("show");
