@@ -11,7 +11,7 @@ const elements = {
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    videoId: 'FL-Fg0_xBco',
+    videoId: 'bjY5EXx2A3o',
     playerVars: {
       autoplay: 0,
       controls: 0,
@@ -19,7 +19,7 @@ function onYouTubeIframeAPIReady() {
       modestbranding: 1,
       fs: 0,
       loop: 1,
-      playlist: 'FL-Fg0_xBco',
+      playlist: 'bjY5EXx2A3o',
       disablekb: 1,
     },
     events: {
