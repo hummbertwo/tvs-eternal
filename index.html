@@ -29,13 +29,15 @@
 
 
     <!-- Video -->
-    <div class="video-container">
-      <video id="video" loop muted playsinline>
-        <source src="https://www.dropbox.com/scl/fi/kwp0q7whsg4w9lfmi2cdb/Video-Consultorio-2022-FinalTV.mp4?rlkey=n7zdl659l6a1e33kg560h0k8r&raw=1" type="video/mp4">
-        Tu navegador no soporta videos.
-      </video>
-     <button id="playButton" aria-label="Reproducir video">▶ Reproducir</button>
-    </div>
+     <div class="video-container">
+    <div id="player"></div>
+  </div>
+  <button id="playButton">▶ Reproducir</button>
+
+  <!-- Cargar API de YouTube -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+ 
 
     <!-- Footer -->
     <div class="footer" id="footer">
